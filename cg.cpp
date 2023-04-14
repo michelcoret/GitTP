@@ -50,7 +50,7 @@ vector<double> conjugateGradient(const vector<vector<double>>& A, const vector<d
         rr_new =  dotProduct(r, r);
         double residualError = sqrt(rr_new);
         if(residualError < tolerance) {
-      //      cout << "Conjugate Gradient converged in " << k+1 << " iterations"  << " with a residual "<<residualError << endl;
+            cout << "Conjugate Gradient converged in " << k+1 << " iterations"  << " with a residual "<<residualError << endl;
             break;
         }
         double beta = rr_new / rr_old;
@@ -60,7 +60,7 @@ vector<double> conjugateGradient(const vector<vector<double>>& A, const vector<d
         }
  
         if(k == maxIterations - 1) {
-      //      cout << "Conjugate Gradient did not converge within " << maxIterations << " iterations." << endl;
+            cout << "Conjugate Gradient did not converge within " << maxIterations << " iterations." << endl;
         }
     }
     return x;
