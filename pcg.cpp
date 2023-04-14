@@ -34,7 +34,7 @@ vector<double> PCG(vector<vector<double>>& A, vector<double>& b, vector<double>&
          double residualError = sqrt(dotProduct(r, r));
         if (residualError < tol) 
         {
-    //        cout << "Preconditioned Conjugate Gradient converged in " << iter+1 << " iterations." << " with a residual "<<residualError <<endl;
+        cout << "Preconditioned Conjugate Gradient converged in " << iter+1 << " iterations." << " with a residual "<<residualError <<endl;
             break;
         }
         z = precond(M,r); // Preconditioning step (z = M^-1 * r)
